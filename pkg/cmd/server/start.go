@@ -7,7 +7,7 @@ import (
 
 	"github.com/spf13/cobra"
 
-	admissionv1beta1 "k8s.io/api/admission/v1beta1"
+	admissionv1 "k8s.io/api/admission/v1"
 	genericapiserver "k8s.io/apiserver/pkg/server"
 	genericoptions "k8s.io/apiserver/pkg/server/options"
 
@@ -30,7 +30,7 @@ func NewAdmissionServerOptions(out, errOut io.Writer, admissionHooks ...apiserve
 		// TODO we will nil out the etcd storage options.  This requires a later level of k8s.io/apiserver
 		RecommendedOptions: genericoptions.NewRecommendedOptions(
 			defaultEtcdPathPrefix,
-			apiserver.Codecs.LegacyCodec(admissionv1beta1.SchemeGroupVersion),
+			apiserver.Codecs.LegacyCodec(admissionv1.SchemeGroupVersion),
 			nil,
 		),
 

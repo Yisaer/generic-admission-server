@@ -11,7 +11,7 @@ import (
 	genericapiserver "k8s.io/apiserver/pkg/server"
 	genericoptions "k8s.io/apiserver/pkg/server/options"
 
-	"github.com/openshift/generic-admission-server/pkg/apiserver"
+	"github.com/Yisaer/generic-admission-server/pkg/apiserver"
 )
 
 const defaultEtcdPathPrefix = "/registry/online.openshift.io"
